@@ -1,1 +1,229 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'variables.scss';
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;
+    scroll-behavior: smooth !important; }
+body {
+    background: $main-bg;
+    margin: 0;
+    font-family: "Avenir Next W01", "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.btn-outline-custom-primary {
+    border-color: #a72587;
+    color: #a72587;
+    font-size: 14px;
+
+    &:hover {
+        background: #a72587;
+        color: #fff;
+    }
+}
+
+// ::-webkit-scrollbar {
+//     width: 5px;
+//     height: 5px;
+//   }
+  
+  
+//   ::-webkit-scrollbar-track {
+//       background: #eee;
+//       border-radius: 20px;
+//   }
+  
+//   ::-webkit-scrollbar-thumb {
+//     background: #a72587; 
+//     border-radius: 10px;
+//   }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .parentDiv {
+    height: 80vh;
+    overflow-y: auto;
+
+    section {
+        margin: 30px 0;
+    }
+}
+
+h3 {
+    color: #a72587;
+    font-weight: 500;
+}
+
+.rightLinks {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 30px;
+
+    li {
+        color: #999;
+        cursor: pointer;
+        margin: 0;
+        padding: 5px 0 5px 20px;
+        border-left: solid 1px #ddd;
+
+        &:hover,
+        &.current-section {
+            color: #a72587;
+            font-weight: 500;
+            border-left: solid 1px #a72587;
+        }
+    }
+}
+
+.section {
+    background-color: #fff;
+    border: 1px #ddd solid;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px 0 rgb(176 176 176 / 50%);
+    border-radius: 4px;
+}
+
+.nextBtn {
+    display: table;
+    margin: 0 0 0 auto;
+    border: 0;
+    i {
+        margin: 0 0 0 4px;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+}
+
+.accordion {
+    .card {
+        border: solid 1px #ddd;
+        border-radius: 0;
+        margin: 0 0 10px;
+        border-bottom: 0;
+    }
+
+    .card-header {
+        padding: 0;
+    }
+
+    .card-body {
+        border: solid 1px #f5e1f0;
+    }
+
+    .btn-link {
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: #fff;
+        border-left: solid 1px #a72587;
+        color: #444;
+        text-decoration: none;
+        border-radius: 0;
+
+        &:hover {
+            background: #f9e7f3;
+        }
+    }
+}
+
+.customTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #f5e1f0;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f5e1f0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #a72587;
+}
+
+.mat-tab-label {
+    padding: 0 !important;
+    min-width: auto !important;
+
+    // &:not(:first-child) {
+    //     &:before {
+    //         content: "";
+    //         width: 100px;
+    //         height: 1px;
+    //         border-bottom: dashed 1px #ddd;
+    //     }
+    // }
+}
+
+.mat-tab-disabled {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.mat-tab-label-active {
+    opacity: 1 !important;
+
+    &:after {
+        content: "";
+        border-bottom: solid 10px #a84887;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+        bottom: 0;
+        position: absolute;
+    }
+}
+
+.inputWrap {
+    display: flex;
+    padding: 8px;
+    border: solid 1px #a84887;
+    align-items: center;
+    margin: 0 0 10px;
+    
+    label {
+        background: #f8e7f3;
+        white-space: nowrap;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .form-control {
+        border: 0;
+    }
+
+    .mat-datepicker-toggle, .mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button {
+        color: #000;
+        button {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.btn-primary {
+    min-width: 100px;
+    background: #a84887;
+    border: #a84887;
+}
+
+.pinkText {
+    color: #a84887;
+}
+
+.pinklink {
+    color: #a84887;
+    text-decoration: underline;
+}
