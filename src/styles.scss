@@ -202,6 +202,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     .form-control {
         border: 0;
+
+        &:active, &:focus {
+            outline: 0;
+            border-bottom: solid 1px #000;
+            box-shadow: none;
+            border-radius: 0;
+        }
     }
 
     .mat-datepicker-toggle, .mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button {
@@ -210,6 +217,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             width: auto;
             height: auto;
         }
+    }
+}
+
+.otpFeild {
+    padding: 1px 10px;
+
+    .form-control {
+        font-size: 24px;
+        letter-spacing: 20px;
+        line-height: 5px;
+        padding: 0 20px;
     }
 }
 
