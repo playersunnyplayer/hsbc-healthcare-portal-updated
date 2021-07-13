@@ -4,16 +4,16 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class AppComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
-  title = 'hsbc-healthcare-portal-upated';
+  ngOnInit(): void {
+  }
 
-
-    loginForm!: FormGroup;
+  loginForm!: FormGroup;
   
     constructor(private formBuilder: FormBuilder, private router: Router) {
     }
@@ -21,6 +21,5 @@ export class AppComponent implements OnInit {
     upcomingAppointments() {
       this.router.navigateByUrl('/upcoming-appointments');
     }
-  
-    ngOnInit() { }
+
 }

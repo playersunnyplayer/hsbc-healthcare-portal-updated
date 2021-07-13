@@ -13,10 +13,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { UpcomingAppointmentsComponent } from './container/upcoming-appointments/upcoming-appointments.component';
+import { LoginComponent } from './container/login/login.component';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UpcomingAppointmentsComponent,
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
