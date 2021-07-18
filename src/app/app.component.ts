@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     }
 
     upcomingAppointments() {
-      this.router.navigateByUrl('/upcoming-appointments');
+      this.router.navigateByUrl('/case-details');
     }
   
     ngOnInit() { }

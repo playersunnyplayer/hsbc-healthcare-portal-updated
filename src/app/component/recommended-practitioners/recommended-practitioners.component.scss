@@ -1,0 +1,28 @@
+.specilityRow {
+    border-bottom: solid 1px #ddd;
+    padding: 20px 0;
+
+    figure {
+        width: 100px;
+        height: 100px;
+
+        img {
+            max-width: 100%;
+            max-height: 100px;
+        }
+    }
+
+    figcaption {
+        border-top: solid 1px #ddd;
+        padding: 10px 0 0;
+    }
+
+    .underline {
+        color: inherit;
+        border-bottom: solid 1px #ddd;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}

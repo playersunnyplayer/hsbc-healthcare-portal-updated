@@ -1,0 +1,275 @@
+<app-header></app-header>
+
+<mat-drawer-container class="example-container" autosize>
+<section class="container">
+    <div class="row">
+        <div class="breadcrumb">
+            <i class="fa fa-home"></i>
+            New Case >
+        </div>
+    </div>
+
+    <p>New Benefit Request for James smith, membership number 3816193</p>
+      
+      <mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!" *ngIf="!appointmentSuccess">
+        <mat-step [stepControl]="CONDITIONGroup" label="CONDITION">
+          <form [formGroup]="CONDITIONGroup">
+                <p class="mb-5">Tell us more about the condition you are seeking treatment for</p>
+
+                <div class="form-inline d-block mb-5">
+                    <p class="mb-2">Enter the condition if this is the first time you are requesting benefit for</p>
+                    <div class="pl-0 col-sm-6">
+                      <mat-form-field class="w-100 labelWrap mr-2 mb-5">
+                          <label for="">Condition</label>
+                          <div class="serchIcon"><i class="fa fa-search"></i></div>
+                          <mat-select>
+                            <div class="confirmLabel">Select to confirm</div>
+                            <mat-option>
+                              <span class="optionLabel">BX0WER</span>
+                              <span>Condition name and description is displayed here</span>
+                              <i class="fa fa-check"></i>
+                            </mat-option>
+                            <mat-option>
+                              <span class="optionLabel">BX0WER</span>
+                              <span>Condition name and description is displayed here</span>
+                              <i class="fa fa-check"></i>
+                            </mat-option>
+                          </mat-select>
+                      </mat-form-field>
+
+                      <div class="row align-items-end ml-auto pull-right">
+                        <button mat-button  matStepperNext class="arrowBtn">
+                          Next
+                          <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
+                        </button>
+                        <small class="pl-2">Press Enter</small>
+                      </div>
+                    </div>
+                </div>
+
+                <p class="borderBottomPink mb-3"><span class="pinkText">Alternatively</span>, select any previous condition for which you want to add a benefit request</p>
+                <button mat-button matStepperNext class="btn btn-primary mr-3">Shoulder Injury</button>
+                <button mat-button matStepperNext class="btn btn-primary">Neck injury</button>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="TREATMENTGroup" label="TREATMENT">
+          <button class="matStepperPrevious" mat-button matStepperPrevious><i class="fa fa-arrow-circle-left"></i></button>
+          
+          <form [formGroup]="TREATMENTGroup">
+                <p class="mb-5">Tell us about the treatment.</p>
+
+                <div class="form-inline d-block mb-5">
+                    <p class="mb-2">I have the <u>procedure</u> name prescribed by my practitioner.</p>
+                    <div class="pl-0 col-sm-6">
+                      <mat-form-field class="w-100 labelWrap mr-2 mb-5">
+                          <label for="">Procedure</label>
+                          <div class="serchIcon"><i class="fa fa-search"></i></div>
+                          <mat-select>
+                            <div class="confirmLabel">Select to confirm</div>
+                            <mat-option>
+                              <span class="optionLabel">BX0WER</span>
+                              <span>Condition name and description is displayed here</span>
+                              <i class="fa fa-check"></i>
+                            </mat-option>
+                            <mat-option>
+                              <span class="optionLabel">BX0WER</span>
+                              <span>Condition name and description is displayed here</span>
+                              <i class="fa fa-check"></i>
+                            </mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-4">
+                  <div class="pinkText">- Alternatively</div>
+                  <p class="ml-5 mb-5">Need authorisation for consultation / Diagnostic / Other service</p>
+
+                  <small class="pull-right">Select to continue</small>
+
+                  <div class="verticalBtns">
+                    <button mat-button (click)="drawer.toggle(); TREATMENTGroup_popup();" class="btn btn-primary grey ticked">Consultation <i class="fa fa-check"></i></button>
+                    <button mat-button (click)="drawer.toggle(); TREATMENTGroup_popup();" class="btn btn-primary grey">Diagnostic</button>
+                    <button mat-button (click)="drawer.toggle(); TREATMENTGroup_popup();" class="btn btn-primary grey">Other</button>
+                  </div>
+                </div>
+                <p>
+                  <small> Your selected choices: (Select the choice to edit) <br>Condition</small> <br>
+                  <button mat-button matStepperNext class="btn btn-primary">Knee Pain</button>
+                </p>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="PROVIDERGroup" label="PROVIDER">
+          <form [formGroup]="CONDITIONGroup">
+
+            <div *ngIf="!newCase">
+              <div class="pinkText">- Finally,</div>
+              <p class="ml-5 mb-5">Let us know about the Healthcare provider for your treatment</p>
+
+              <div class="form-inline d-block mb-5">
+                <section class="example-section">
+                  <mat-checkbox class="example-margin mr-3">Hospital</mat-checkbox>
+                  <mat-checkbox class="example-margin">Practitioner</mat-checkbox>
+                </section>
+                <div class="pl-0 col-sm-12">
+                    <mat-form-field class="w-100 labelWrap mr-2 mb-5">
+                        <label for="">Provider</label>
+                        <div class="serchIcon"><i class="fa fa-search"></i></div>
+                        <mat-select>
+                          <div class="confirmLabel">Select to confirm</div>
+                          <mat-option>
+                            <span class="optionLabel">BX0WER</span>
+                            <span>Condition name and description is displayed here</span>
+                            <i class="fa fa-check"></i>
+                          </mat-option>
+                          <mat-option>
+                            <span class="optionLabel">BX0WER</span>
+                            <span>Condition name and description is displayed here</span>
+                            <i class="fa fa-check"></i>
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <div class="d-flex">
+                      <div class="mr-3">
+                        <div class="pinkText mb-2">- Alternatively,</div>
+                        <p class="ml-5 mb-5">
+                          <mat-checkbox class="example-margin mr-3">I want to see any available practitioner <u>near-by</u></mat-checkbox>
+                          
+                          <button mat-button (click)="drawer.toggle(); PROVIDERGroup_popup();" class="btn btn-primary ml-3">Show</button>
+                        </p>
+                      </div>
+                      <div class="">
+                        <p><small>Your selection</small></p>
+                        <div class="yourSelectionSec">
+                          <p>Dr. Sarah Jones</p>
+                          <p>TREATMENT LOCATION:</p>
+                          <p>Abbey Park HospitalLocal care, Central London</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-between">
+                      <div>Your selected choices: (Select the choice to edit)</div>
+                      <div>
+                        <a class="arrowBtn" (click)="drawer.toggle(); terms_popup();">
+                          Create Case and Finish
+                          <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
+                        </a>
+                        <small class="pl-2">Press Enter</small>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="mr-1">
+                  <p>Condition</p>
+                  <button mat-button matStepperNext class="btn btn-primary mr-3">Knee pain</button>
+                </div>
+                <div>
+                  <p>Service Type</p>
+                  <button mat-button matStepperNext class="btn btn-primary">Consultation – Initial Consultation</button>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="newCase">
+              <p class="borderBottomPink">
+                <i class="fa fa-check pinkText"></i>
+                A new case with ID: 23304922 has been created for your condition and the benefit request with number 3816193 has been Approved.
+              </p>
+              <p class="text-right small">Email confirmation of the authorisation is sent to your registered email address.</p>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="col-sm-6 mb-4">
+                <div class="pinkText">- Next,</div>
+                <p class="ml-5 mb-5">Want to book an appointment for your consultation service?</p>
+
+                <small class="pull-right">Select to continue</small>
+
+                <div class="verticalBtns">
+                  <button mat-button (click)="drawer.toggle(); appointmentSlots_popup();" class="btn btn-primary grey ticked">Yes, Let’s create new Appointment <i class="fa fa-check"></i></button>
+                  <button mat-button (click)="drawer.toggle(); appointmentSlots_popup();" class="btn btn-primary grey">No, Thanks. I already have an appointment.</button>
+                </div>
+              </div>
+              <div class="col-sm-4 pull-right d-flex align-items-end">
+                <button mat-button matStepperNext class="arrowBtn" (click)="drawer.toggle(); terms_popup();">
+                  Next
+                  <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
+                </button>
+                <small class="pl-2">Press Enter</small>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="CONFIRM_APPOINTMENTGroup" label="CONFIRM APPOINTMENT">
+            <p class="mb-5">Please confirm the details of your request for benefit and appointment are correct:</p>
+
+            <div class="d-flex mb-5">
+              <div class="col-sm-5">
+                <div class="d-flex align-items-center mb-2">
+                  <label class="benefitLabel">BX0220</label>
+                  <span>Condition name and description is displayed here</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <label class="benefitLabel">BX0220</label>
+                  <span>Condition name and description is displayed here</span>
+                </div>
+              </div>
+
+              <div class="col-sm-6 practitionerDetails">
+                <p>
+                  <label class="greyText">PRACTITIONER:</label>
+                  Dr. Sarah Jones
+                </p>
+                <p>
+                  <label class="greyText">SPECIALTY:</label>
+                  cardiology
+                </p>
+                <p>
+                  <label class="greyText">TREATMENT LOCATION:</label>
+                  Abbey Park HospitalLocal care, Central London
+                </p>
+                <p>
+                  <label class="greyText">APPOINTMENT DATE & TIME:</label>
+                  <span class="pinkText">Friday 12th June 2021 10:30 AM to 11:15 AM</span>
+                </p>
+              </div>
+            </div>
+
+            <p class="pinkText mb-2">Please confirm the following Declarations and click ‘Create Appointment and Finish’ to complete the booking.</p>
+
+            <mat-checkbox class="example-margin mr-3">I understand as per the <a href="#">Terms and Conditions</a> of my cover there may be elements of my treatment that may not be reimbursed in full and that I
+              may be liable for any excess, benefit limit or other shot falls that may be associated with this treatment.</mat-checkbox>
+            
+            <div class="mt-5 text-center">
+              <button class="btn btn-primary pink" (click)="appointmentSuccessFunc()">Create Appointment and Finish</button>
+              <small class="pl-2">Press Enter</small>
+            </div>
+        </mat-step>
+      </mat-stepper>
+
+      <ng-container *ngIf="appointmentSuccess">
+        <div class="appointmentSuccess">
+          <p class="borderBottomPink text-center pb-2"><i class="fa fa-check pinkText"></i> Appointment with reference number <u>1002293</u> has been booked successfully.</p>
+          <div class="mt-5 text-center">
+            <button class="btn btn-primary pink" (click)="backHome()">Back to Home</button>
+            <small class="pl-2">Press Enter</small>
+          </div>
+        </div>
+      </ng-container>
+    </section>
+</mat-drawer-container>
+<mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+  <div class="sideBarHeading">
+    {{ sideBarHeading_headingName }}
+    <i class="fa fa-times" (click)="drawer.toggle(); removeAllCondition()"></i>
+  </div>
+
+  <app-consultation-type *ngIf="consultationType"></app-consultation-type>
+  <app-recommended-practitioners *ngIf="recommendedPractitioners"></app-recommended-practitioners>
+  <app-terms-popup *ngIf="termsPopup" (parentComponent)="parentFunc($event)"></app-terms-popup>
+  <app-appointment-slots-popup *ngIf="appointmentSlots"></app-appointment-slots-popup>
+</mat-drawer>

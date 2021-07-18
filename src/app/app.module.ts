@@ -16,13 +16,28 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { UpcomingAppointmentsComponent } from './container/upcoming-appointments/upcoming-appointments.component';
 import { LoginComponent } from './container/login/login.component';
 import { HeaderComponent } from './component/header/header.component';
+import { CasedetailsComponent } from './container/casedetails/casedetails.component';
+import { BenefitRequestSlideComponent } from './container/benefit-request-slide/benefit-request-slide.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ConsultationTypeComponent } from './component/consultation-type/consultation-type.component';
+import { RecommendedPractitionersComponent } from './component/recommended-practitioners/recommended-practitioners.component';
+import { TermsPopupComponent } from './component/terms-popup/terms-popup.component';
+import { AppointmentSlotsPopupComponent } from './component/appointment-slots-popup/appointment-slots-popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpcomingAppointmentsComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    CasedetailsComponent,
+    BenefitRequestSlideComponent,
+    ConsultationTypeComponent,
+    RecommendedPractitionersComponent,
+    TermsPopupComponent,
+    AppointmentSlotsPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +53,9 @@ import { HeaderComponent } from './component/header/header.component';
     MatIconModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

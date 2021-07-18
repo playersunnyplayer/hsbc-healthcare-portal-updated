@@ -2,7 +2,9 @@
 
 .rightSec {
     text-align: right;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
 
     .small {
         line-height: 10px;
@@ -24,6 +26,7 @@ mat-toolbar {
     height: 10vh;
     background: #fff;
     color: #999;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 mat-sidenav {
@@ -75,4 +78,8 @@ mat-sidenav-container {
 
 app-footer {
     height: 10vh;
+}
+
+a {
+    color: inherit;
 }

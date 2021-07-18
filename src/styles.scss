@@ -249,11 +249,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border-radius: 0;
     font-size: 14px;
 
+    &.grey {
+        color: #a84887 !important;
+        background: #f3f7f9 !important;
+    }
+
+    &.pink {
+        color: #fff;
+        background: #a84887;
+    }
+
     i {
         font-size: 13px;
         vertical-align: middle;
         margin: 0 5px 0 0;
     }
+}
+
+.btn-secondary {
+    border: solid 1px #ccc;
+    color: #666;
+    background: #fff;
+    border-radius: 3px;
+
+    &:hover, &:active, &:focus, .active {
+        color: #fff;
+        background: #a84887;
+    }
+}
+
+.greyText {
+    color: #999;
 }
 
 .pinkText {
@@ -263,6 +289,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .pinklink {
     color: #a84887;
     text-decoration: underline;
+}
+
+.pinkLabel {
+    background: #f8e7f3;
 }
 
 .element-header {
@@ -309,4 +339,115 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     i {
         color: #fff;
     }
+}
+
+.breadcrumb {
+    background: none;
+    margin: 10px 0 0;
+
+    i {
+        color: #a84887;
+        font-size: 20px;
+        margin: 0 10px 0 0;
+    }
+}
+
+.borderBottomPink {
+    border-bottom: solid 1px #a84887;
+}
+
+.borderLeft-pink {
+    border-left: solid 1px #f8e7f3;
+}
+
+.mat-stepper-horizontal, .mat-stepper-vertical {
+    background: none;
+}
+
+.mat-horizontal-content-container {
+    position: relative;
+    background: #fff;
+    padding: 40px 20px !important;
+}
+
+
+.labelWrap {
+    border: solid 1px #f9e7f4;
+    padding: 1px;
+  }
+  .labelWrap label {
+    background: #f9e7f4;
+    padding: 6px 15px;
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+  }
+  .labelWrap .mat-form-field-wrapper {
+    padding: 0;
+  }
+  .labelWrap .mat-form-field-infix {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .labelWrap .mat-select-value {
+    border: 0;
+    padding: 6px 0 0 0;
+    text-align: center;
+  }
+  .labelWrap .mat-form-field-underline {
+    display: none;
+  }
+  .labelWrap .mat-select-arrow-wrapper {
+    position: relative;
+    top: 4px;
+  }
+
+  .cdk-overlay-pane {
+      margin-top: 40px;
+  }
+
+  .serchIcon {
+      margin: 5px 0 0;
+  }
+
+.sideBarHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #a84887;
+    margin: 10px 0 40px;
+
+    i {
+        font-size: 26px;
+    }
+}
+
+.matStepperPrevious {
+    font-size: 28px;
+    margin: 0 0 0 -19px;
+    position: absolute;
+    top: 0;
+    background: none;
+    border: 0;
+    color: #a84887;
+}
+
+.consultationBtnsWrap {
+    .btn {
+        font-size: 12px;
+    }
+}
+
+.okBtn {
+    min-width: auto;
+}
+
+.mat-checkbox-label {
+    white-space: initial;
+}
+
+.mat-drawer-container {
+    background: none;
 }

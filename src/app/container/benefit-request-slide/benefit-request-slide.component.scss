@@ -1,0 +1,141 @@
+.benifitRequestCard {
+    background: #fff;
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 10px;
+
+    .pinkLabel {
+        padding: 10px;  
+        margin: 0 10px 0 0;
+    }
+}
+
+::ng-deep .mat-step-icon {
+    display: none;
+}
+
+::ng-deep .mat-select-panel {
+    box-shadow: none !important;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    display: none;
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+    height: auto;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container,
+::ng-deep .mat-horizontal-stepper-header {
+    align-items: flex-end !important;
+}
+
+::ng-deep .mat-step-header .mat-step-label {
+    display: none;
+
+    &.mat-step-label-selected {
+        display: block;
+        border-bottom: solid 1px #a84887;
+        font-weight: 400;
+        padding: 0 20px;
+    }
+}
+
+.confirmLabel {
+    text-align: right;
+    padding: 10px 0;
+}
+
+.mat-option {
+    padding: 0;
+    margin: 0 0 3px;
+    height: auto !important;
+    line-height: inherit !important;
+}
+
+::ng-deep .mat-option-text {
+    display: flex !important;
+    align-items: center;
+    background: #f3f7f9;
+    border: solid 1px #ddd;
+
+    .optionLabel {
+        background: #eee8f1;
+        padding: 10px;
+        margin: 0 15px 0 0;
+    }
+    
+    .fa-check {
+        margin: 0 10px 0 auto;
+        font-size: 20px;
+        color: #999;
+    }
+}
+
+.verticalBtns {
+    display: block;
+
+    button {
+        background: #f3f7f9;
+        display: flex;
+        width: 100%;
+        margin: 0 0 5px;
+        justify-content: center;
+
+        .fa-check {
+            font-size: 20px;
+            color: #999;
+            display: none;
+            position: absolute;
+            right: 20px;
+        }
+
+        &:hover {
+            color: inherit;
+        }
+
+        &.ticked {
+            .fa-check {
+                display: block;
+            }
+        }    
+    }
+}
+
+.mat-drawer {
+    top: 0;
+    position: fixed;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 0 20px;
+    border-color: #a84887;
+}
+
+.consultationBtnsWrap {
+    .okBtn {
+        min-width: auto;
+    }
+}
+
+.yourSelectionSec {
+    border-left: solid 1px #a84887;
+    padding: 0 0 0 10px;
+}
+
+.benefitLabel {
+    background: #f9e7f4;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    color: #999;
+}
+
+.practitionerDetails {
+    border-left: solid 1px #a84887;
+    padding: 0 0 0 40px;
+}
+
+.appointmentSuccess {
+    background: #fff;
+    padding: 100px 20px;
+}
