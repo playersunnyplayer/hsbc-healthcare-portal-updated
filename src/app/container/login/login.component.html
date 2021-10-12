@@ -1,67 +1,120 @@
-<div class="d-flex align-items-center loginInner">
-    <div class="col-sm-4 text-center">
-        <img src="assets/img/trust-logo.png" alt="">
-        <p>Health Plan Membership Portal</p>
-    </div>
-    <div class="col-sm-8 rightSec">
-        <h1>Welcome to the HSBC Health Plan enrolment page,
-            administered by TrustInHealth.</h1>
-  
-        <p>To login, please ensure you have your unique membership number or your employee number
-            to hand. If you have not received this, please contact your scheme administrator.</p>
-  
-        <p class="mt-4 mb-3">Login to Membership site</p>
-            
-        <mat-tab-group>
-            <mat-tab label="1. Identify">
-              <p class="mt-3">Enter your membership information to continue</p>
-  
-              <div class="col-sm-6 p-0">
-                <section class="">
-                    I have
-                    <mat-checkbox class="mr-3">Membership Number </mat-checkbox>
-                    <mat-checkbox class="mr-3">Employee ID</mat-checkbox>
-                </section>
-  
-                <div class="form-group">
-                  <div class="inputWrap">
-                    <label class="d-block">Membership Number</label>
-                    <input type="text" class="form-control" autocomplete="username" />
-                    <mat-icon matSuffix>login</mat-icon>
+<div class="loginOuterWrap">
+  <div class="d-flex loginInner">
+      <div class="col-sm-6 text-center loginInner_left">
+          <img src="assets/img/trust-logo.png" class="loginInner_logo" alt="">
+          <p class="loginleftpara">Welcome to the Health Plan enrolment page, administered by TrustInHealth.</p>
+      </div>
+      <div class="col-sm-6 rightSec">
+          <h1>Member Login</h1>
+    
+          <p>To login, please ensure you have your unique membership number to hand. If you have not received this, please contact your scheme administrator.</p>
+    
+          <mat-tab-group>
+              <mat-tab label="1. Identify">
+                <p class="mb-4">Enter your membership information to continue</p>
+    
+                <div class="p-0">
+                  <div class="form-group mb-5">
+                    <div class="inputWrap">
+                      <label class="d-block">Membership Number</label>
+                      <input type="text" class="form-control" autocomplete="username" />
+                    </div>
+                    <div class="inputWrap">
+                      <label class="d-block">Date Of Birth</label>
+                      <input matInput [matDatepicker]="picker" class="form-control">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </div>
                   </div>
-                  <div class="inputWrap">
-                    <label class="d-block">Date Of Birth</label>
-                    <input matInput [matDatepicker]="picker" class="form-control">
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
+    
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-secondary green backBtn" (click)="upcomingAppointments()" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 24 17">
+                        <g id="Group_13" data-name="Group 13" transform="translate(24.227 17.189) rotate(180)">
+                          <g id="Polygon_3" data-name="Polygon 3" transform="translate(24.227 0.189) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#009c94"/>
+                          </g>
+                          <g id="Polygon_4" data-name="Polygon 4" transform="translate(15.227 0.189) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#009c94"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                      Back
+                    </button>
+                    <button class="btn btn-primary green ml-3 nextBtn" (click)="upcomingAppointments()" type="submit">
+                      Next
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 24 17">
+                        <g id="Group_12" data-name="Group 12" transform="translate(0.2 -0.228)">
+                          <g id="Polygon_3" data-name="Polygon 3" transform="translate(24.8 0.228) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,16H0Z" stroke="none"/>
+                            <path d="M 8.5 2.131503105163574 L 1.66361141204834 15 L 15.33638858795166 15 L 8.5 2.131503105163574 M 8.5 0 L 17 16 L 0 16 L 8.5 0 Z" stroke="none" fill="#fff"/>
+                          </g>
+                          <g id="Polygon_4" data-name="Polygon 4" transform="translate(14.8 0.228) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                    </button>
                   </div>
                 </div>
-  
-                <div class="d-flex">
-                  <button class="btn btn-primary pink ml-auto" (click)="upcomingAppointments()" type="submit">Next</button>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab  disabled class="dasabledLine" label="-------"></mat-tab>
-            <mat-tab label="2. Verify">
-  
-              <p class="mt-3">Please enter the one-time password we have sent to your registered mobile
-                number ending in 3245</p>
-  
-              <div class="col-sm-6 p-0">
-                <div class="form-group">
-                  <div class="inputWrap otpFeild">
-                    <label class="d-block">One Time Password</label>
-                    <input type="text" class="form-control" autocomplete="otp" />
+              </mat-tab>
+              <mat-tab disabled class="dasabledLine" label=" "></mat-tab>
+              <mat-tab label="2. Verify">
+    
+                <p class="mt-3">Please enter the one-time password we have sent to your registered mobile
+                  number ending in carr****@gmail.com</p>
+    
+                <div class="p-0 mt-5">
+                  <div class="form-group">
+                    <label class="bold otpLabel">One Time Password</label>
+                    <div class="otpFeild">
+                      <input type="text" class="form-control inputWrap" autocomplete="otp" />
+                      <input type="text" class="form-control inputWrap" autocomplete="otp" />
+                      <input type="text" class="form-control inputWrap" autocomplete="otp" />
+                      <input type="text" class="form-control inputWrap" autocomplete="otp" />
+                    </div>
+                    <p>If you didn’t receive a code, <a href="#" class="greenLink">Resend One-time Password</a></p>
                   </div>
-                  <p class="text-right">If you didn’t receive a code, <a href="#" class="pinklink">resend</a></p>
+    
+                  <div class="d-flex justify-content-end">
+                    
+                    <button class="btn btn-secondary green backBtn" (click)="upcomingAppointments()" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 24 17">
+                        <g id="Group_13" data-name="Group 13" transform="translate(24.227 17.189) rotate(180)">
+                          <g id="Polygon_3" data-name="Polygon 3" transform="translate(24.227 0.189) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#009c94"/>
+                          </g>
+                          <g id="Polygon_4" data-name="Polygon 4" transform="translate(15.227 0.189) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#009c94"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                      Back
+                    </button>
+                    <button class="btn btn-primary green ml-3 nextBtn" (click)="upcomingAppointments()" type="submit">
+                      Next
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 24 17">
+                        <g id="Group_12" data-name="Group 12" transform="translate(0.2 -0.228)">
+                          <g id="Polygon_3" data-name="Polygon 3" transform="translate(24.8 0.228) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,16H0Z" stroke="none"/>
+                            <path d="M 8.5 2.131503105163574 L 1.66361141204834 15 L 15.33638858795166 15 L 8.5 2.131503105163574 M 8.5 0 L 17 16 L 0 16 L 8.5 0 Z" stroke="none" fill="#fff"/>
+                          </g>
+                          <g id="Polygon_4" data-name="Polygon 4" transform="translate(14.8 0.228) rotate(90)" fill="none">
+                            <path d="M8.5,0,17,15H0Z" stroke="none"/>
+                            <path d="M 8.5 2.028339385986328 L 1.716058731079102 14 L 15.2839412689209 14 L 8.5 2.028339385986328 M 8.5 0 L 17 15 L 0 15 L 8.5 0 Z" stroke="none" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                    </button>
+                  </div>
                 </div>
-  
-                <div class="d-flex">
-                  <button class="btn btn-primary pink ml-auto" type="submit">Verify</button>
-                </div>
-              </div>
-            </mat-tab>
-        </mat-tab-group>
-    </div>
+              </mat-tab>
+          </mat-tab-group>
+      </div>
   </div>
+</div>

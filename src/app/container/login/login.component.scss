@@ -1,4 +1,93 @@
+.loginOuterWrap {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginInner {
+    max-width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(0 0 0 / 7%);
+}
+
+.loginInner_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 40px;
+    align-items: start;
+    background: url("../../../assets/img/login-bg.jpg");
+    background-size: cover;
+}
+
+.loginleftpara {
+    color: #FFE6E6;
+    text-align: left;
+    font-size: 17px;
+    line-height: 30px;
+    width: 70%;
+}
+
+.mat-datepicker-toggle {
+    margin: 0 -20px 0 0;
+}
+
+::ng-deep .mat-tab-disabled {
+    border-top: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 10px #2f333a;
+    height: 10px !important;
+    margin: 18px 40px 0;
+}
+
+.loginInner_logo {
+    max-height: 80px;
+}
+
 .rightSec {
     background: #fff;
-    padding: 50px;
+    padding: 80px 60px;
+
+    h1 {
+        color: #892182;
+        font-size: 31px;
+        margin: 0 0 30px;
+    }
+
+    .mat-tab-group {
+        margin: 30px 0 0;
+    }
+}
+
+.btn.green {
+    img {
+        height: 15px;
+    }
+}
+
+.otpLabel {
+    color: #444;
+    font-size: 12px;
+}
+
+.backBtn {
+    svg {
+        margin: 0 10px 0 0;
+    }
+
+    &:hover {
+        path {
+            fill: #fff;
+        }   
+    }
+}
+
+.nextBtn {
+    padding: 10px 10px;
+    svg {
+        margin: 0 0 0 10px;
+    }
 }

@@ -1,12 +1,36 @@
-<mat-toolbar class="mat-elevation-z8 d-flex justify-content-between">    
-    <div class="col-sm-3">
-      <img src="assets/img/hsbc-logo.png" class="headerLogo" alt="">
-    </div>
-    
-    <div class="col-sm-4 rightSec">
-      <div class="d-flex align-items-center justify-content-between">
-        <a href="#"><i class="fa fa-phone-square"></i> + 44 1222 9999</a>
-        <div>Hans Lundstrom</div>
+<mat-toolbar class="mat-elevation-z8">    
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-sm-3">
+        <img src="assets/img/circle-logo.png" class="headerLogo" alt="">
+      </div>
+      
+      <div class="col-sm-4 rightSec">
+        <div class="d-flex align-items-center justify-content-end">
+          <!-- <a href="#"><img src="assets/img/notification-icon.svg" alt=""> + 44 1222 9999</a> -->
+
+          <div class="notificationSec">
+            <div><img src="assets/img/notification-icon.svg" alt=""> Notifications <i class="fa fa-angle-down"></i></div>
+
+            <ul>
+              <li class="heading">Heading <div class="badge">4</div> </li>
+              <li>Notification 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+              <li>Nemo possimus sed atque odio magni molestiae ducimus facere aliquid aperiam doloremque exercitationem,</li>
+              <li>voluptatem, quibusdam, sequi fugit tempore consequuntur. Voluptas, laborum ullam!</li>
+              <li>Nemo possimus sed atque odio magni molestiae ducimus facere aliquid aperiam doloremque exercitationem,</li>
+            </ul>
+          </div>
+
+          <div class="notificationSec ProfileSec">
+            <div><img src="assets/img/user-icon.svg" alt="">Hans Lundstrom <i class="fa fa-angle-down"></i></div>
+
+            <ul>
+              <li>Profile</li>
+              <li>Logout</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </mat-toolbar>

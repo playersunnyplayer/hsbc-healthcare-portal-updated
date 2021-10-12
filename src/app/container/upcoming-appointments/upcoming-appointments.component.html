@@ -1,167 +1,102 @@
 <app-header></app-header>
 
-<section class="container">
-    <div class="row">
-        <div class="col-sm-5 d-flex align-items-end">
-            <div class="labelDiv">
-                <label for="">Health Plan</label>
-                <div class="text">Comprehensive Group Health Insurance</div>
+<section class="bannerBoxWrap">
+    <div class="container">
+        <div class="row">
+            <div class="bannerBox">
+                <div class="bannerBox_heading">Corporate Health Care</div>
+                <div class="bannerBox_inner">
+                    <div class="row mb-3">
+                        <div class="col-sm-6 strong">Member ID:</div>
+                        <div class="col-sm-6">7828338273</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 strong">Health Plan (604321):</div>
+                        <div class="col-sm-6">904-33045-03</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 strong">Group Number:</div>
+                        <div class="col-sm-6">100293</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 strong">Member:</div>
+                        <div class="col-sm-6">Hans Lundstrom</div>
+                    </div>
+                </div>
             </div>
-            <small class="exSmall">Know more</small>
         </div>
     </div>
+</section>
+<section class="container">
+    <div class="row">
+        <section class="threeBoxSec">
+            <div class="row justify-content-between">
+                <div class="col-sm-6">
+                    <div class="requestBox">
+                        <div class="requestBox_heading">Request Authorisation for Benefit</div>
+                        <p>Request authorisation for a consultation, diagnostics or treatment quickly and easily by opening a new case or managing an existing case</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="bgBox">
+                        <a routerLink="/create-new-case" class="btn btn-primary">
+                            <img src="assets/img/create-new-case-icon.svg" alt="">
+                            Create a new case
+                        </a>
+                        <p>Open a new case and request authorisation for a consultation, diagnostics or treatment</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="bgBox">
+                        <a routerLink="/manage-cases" class="btn btn-primary">
+                            <img src="assets/img/create-new-case-icon.svg" alt="">
+                            Manage my case
+                        </a>
+                        <p>Review your open and past cases and request authorisation for additional treatment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="row mt-4">
-        <div class="col-sm-8 pr-5">
+        <section class="thumbnailsHomeWrap">
             <div class="row">
-                <div class="needCareSec align-items-center">
-                    <div class="col-sm-8 leftpink">
-                        <div class="leftpinkLeft">
-                            Need care for a new condition or authorisation for a planned procedure?
+                <div class="col-sm-4">
+                    <div class="thumbnailsHome">
+                        <figure>
+                            <img src="assets/img/maskGroup2.png" alt="">
+                        </figure>
+                        <div class="thumbnailsHome_inner">
+                            <div class="thumbnailsHome_heading">Conditions and Treatments</div>
+                            <p>conditions and treatments covered as part of your membership scheme</p>
+                            <a href="#" class="btn btn-primary"><img src="assets/img/arrow-icon.svg" class="mr-2" alt=""> Search Now</a>
                         </div>
-                        <div class="arrowWrap">
-                            <i class="fa fa-arrow-circle-o-right"></i>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnailsHome">
+                        <figure>
+                            <img src="assets/img/maskGroup3.png" alt="">
+                        </figure>
+                        <div class="thumbnailsHome_inner">
+                            <div class="thumbnailsHome_heading">Conditions and Treatments</div>
+                            <p>Search for network diagnostics and tests covered in your membership scheme</p>
+                            <a href="#" class="btn btn-primary"><img src="assets/img/arrow-icon.svg" class="mr-2" alt=""> Search Now</a>
                         </div>
                     </div>
-
-                    <div class="col-sm-4">
-                        <a href="#" class="arrowBtn">
-                            Create a new Case
-                            <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
-                        </a>
-                        <p>Authorisation for a new consultation,
-                            procedure or diagnostic</p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnailsHome">
+                        <figure>
+                            <img src="assets/img/maskGroup1.png" alt="">
+                        </figure>
+                        <div class="thumbnailsHome_inner">
+                            <div class="thumbnailsHome_heading">Provider network</div>
+                            <p>Search for network of providers as part of your membership scheme.</p>
+                            <a href="#" class="btn btn-primary"><img src="assets/img/arrow-icon.svg" class="mr-2" alt=""> Search Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="element-header mt-5">
-                    <div class="pb-1 justify-content-between">
-                        <span class="mr-auto">
-                            Upcoming Appointments
-                        </span>
-                    </div>
-                </div>
-
-                <div>
-                    You have an online consultation appointment scheduled with <u>Dr. Sarah Jones</u> at <u>14:30 PM</u> today 
-                    <span class="pull-right">
-                        <button class="btn btn-primary mr-2" (click)="details()">
-                            <i class="fa fa-heart"></i> Details
-                        </button>
-                        <button class="btn btn-primary">
-                            <i class="fa fa-heart"></i> Join Now
-                        </button>
-                    </span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4 pl-1 pr-1">
-                    <div class="commonWhiteThumbs">
-                        <div class="heading">Conditions and Treatments</div>
-                        <p>Search for conditions and treatments
-                            covered as part of your membership
-                            scheme.</p>
-
-                        <a href="#" class="arrowBtn">
-                            Search Now
-                            <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 pl-1 pr-1">
-                    <div class="commonWhiteThumbs">
-                        <div class="heading">Conditions and Treatments</div>
-                        <p>Search for conditions and treatments
-                            covered as part of your membership
-                            scheme.</p>
-
-                        <a href="#" class="arrowBtn">
-                            Search Now
-                            <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 pl-1 pr-1">
-                    <div class="commonWhiteThumbs">
-                        <div class="heading">Conditions and Treatments</div>
-                        <p>Search for conditions and treatments
-                            covered as part of your membership
-                            scheme.</p>
-
-                        <a href="#" class="arrowBtn">
-                            Search Now
-                            <span class="arrowIconWrap"><i class="fa fa-long-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 borderLeft">
-            <div class="element-header">
-                <div class="pb-1 justify-content-between">
-                    <span class="mr-auto">
-                        My Care notes and recent conditions
-                    </span>
-                </div>
-            </div>
-
-            <div class="careNoteThumb">
-                <div class="d-flex justify-content-between">
-                    <div class="pinkText">Case Number: 10223243</div>
-                    <div>10-Jun-2021 10:30 AM</div>
-                </div>
-
-                <div class="summary">
-                    1A00RN Shoulder injury
-                    <span class="authorisationNum">2 Authorisation</span>
-                </div>
-
-                <div class="details">
-                    <p>Condition Type: Orthopedic</p>
-                    <p>Description: Persistent swelling and soreness of left ..</p>
-                    <p>Provider: Nuffield Health Hospital, Leicester, UK</p>
-                </div>
-
-                <div>
-                    <button class="btn btn-primary mr-2">
-                        <i class="fa fa-heart"></i> New Benefit Request
-                    </button>
-                    <button class="btn btn-primary">
-                        <i class="fa fa-heart"></i> Details
-                    </button>
-                </div>
-            </div>
-
-            <div class="careNoteThumb">
-                <div class="d-flex justify-content-between">
-                    <div class="pinkText">Case Number: 10223243</div>
-                    <div>10-Jun-2021 10:30 AM</div>
-                </div>
-
-                <div class="summary">
-                    1A00RN Shoulder injury
-                    <span class="authorisationNum">2 Authorisation</span>
-                </div>
-
-                <div class="details">
-                    <p>Condition Type: Orthopedic</p>
-                    <p>Description: Persistent swelling and soreness of left ..</p>
-                    <p>Provider: Nuffield Health Hospital, Leicester, UK</p>
-                </div>
-
-                <div>
-                    <button class="btn btn-primary mr-2">
-                        <i class="fa fa-heart"></i> New Benefit Request
-                    </button>
-                    <button class="btn btn-primary">
-                        <i class="fa fa-heart"></i> Details
-                    </button>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 </section>

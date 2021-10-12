@@ -25,6 +25,13 @@ import { ConsultationTypeComponent } from './component/consultation-type/consult
 import { RecommendedPractitionersComponent } from './component/recommended-practitioners/recommended-practitioners.component';
 import { TermsPopupComponent } from './component/terms-popup/terms-popup.component';
 import { AppointmentSlotsPopupComponent } from './component/appointment-slots-popup/appointment-slots-popup.component';
+import { ManageCasesComponent } from './container/manage-cases/manage-cases.component';
+import { CreateNewCaseComponent } from './container/create-new-case/create-new-case.component';
+import { TimelineSectionComponent } from './component/timeline-section/timeline-section.component';
+import { MatTimepickerModule } from 'mat-timepicker';
+import { SelectPractitionerPopupComponent } from './container/select-practitioner-popup/select-practitioner-popup.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,7 +44,11 @@ import { AppointmentSlotsPopupComponent } from './component/appointment-slots-po
     ConsultationTypeComponent,
     RecommendedPractitionersComponent,
     TermsPopupComponent,
-    AppointmentSlotsPopupComponent
+    AppointmentSlotsPopupComponent,
+    ManageCasesComponent,
+    CreateNewCaseComponent,
+    TimelineSectionComponent,
+    SelectPractitionerPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +58,7 @@ import { AppointmentSlotsPopupComponent } from './component/appointment-slots-po
     MatToolbarModule,
     NgbModule,
     MatFormFieldModule,
+    MatInputModule,
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
@@ -55,7 +67,9 @@ import { AppointmentSlotsPopupComponent } from './component/appointment-slots-po
     MatDatepickerModule,
     MatStepperModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTimepickerModule,
+    // MatCarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

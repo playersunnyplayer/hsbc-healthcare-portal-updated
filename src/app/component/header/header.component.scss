@@ -3,8 +3,22 @@
 .rightSec {
     text-align: right;
     font-size: 16px;
-    font-weight: 400;
-    color: #444;
+    font-weight: 600;
+    color: #5D5D5D;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    a {
+        border-right: solid 1px #b5adad;
+        padding: 0 20px 0 0;
+        margin: 0 20px 0 0;
+    }
+
+    img {
+        height: 20px;
+        margin: 0 10px 0 0;
+    }
 
     .small {
         line-height: 10px;
@@ -23,10 +37,12 @@
 }
 
 mat-toolbar {
-    height: 10vh;
+    min-height: 70px;
     background: #fff;
     color: #999;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    display: flex;
+    align-items: center;
 }
 
 mat-sidenav {
@@ -52,7 +68,7 @@ mat-sidenav {
         padding: 10px;
 
         &.active {
-            border-left: solid 2px #a72587;
+            border-left: solid 2px #FC5960;
         }
     }
 }
@@ -73,7 +89,7 @@ mat-sidenav-container {
 }
 
 .headerLogo {
-    height: 46px;
+    height: 60px;
 }
 
 app-footer {
@@ -82,4 +98,76 @@ app-footer {
 
 a {
     color: inherit;
+}
+
+.notificationSec {
+    margin: 0 30px 0 0;
+    padding: 0 30px 0 0;
+    border-right: solid 2px #c6c6c6;
+    position: relative;
+    cursor: pointer;
+
+    ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        background: #fff;
+        width: 300px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+        list-style: none;
+        display: none;
+
+        li {
+            width: 100%;
+            border-bottom: solid 1px #f6f7f9;
+            padding: 8px 20px;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: left;
+            white-space: initial;
+
+            &:hover {
+                background: #f6f7f9;
+            }
+        }
+    }
+
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
+
+    .heading {
+        width: 100%;
+        border-bottom: solid 1px #f6f7f9;
+        padding: 8px 20px;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+        text-align: left;
+        white-space: initial;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .badge {
+        background: #FC5960;
+        border-radius: 50%;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        line-height: 15px;
+    }
+}
+
+.ProfileSec {
+    padding: 0;
+    border-right: 0;
+
+    ul {
+        width: 150px;
+    }
 }
