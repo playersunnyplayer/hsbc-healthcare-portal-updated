@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .innerBanner {
     background: url("../../../assets/img/banner.png");
     background-size: cover;
@@ -41,11 +43,11 @@
 }
 
 .status {
-    color: #fb5a60;
+    color: $primary;
 }
 
 .requestBtn {
-    background: #fb5a60;
+    background: $primary;
     border: 0;
     color: #fff;
     padding: 6px 30px;
@@ -77,7 +79,7 @@
     .head {
         display: flex;
         justify-content: space-between;
-        border-bottom: solid 2px #fb5a60;
+        border-bottom: solid 2px $primary;
         padding: 0 0 10px;
         margin: 0 0 20px;
         align-items: flex-end;

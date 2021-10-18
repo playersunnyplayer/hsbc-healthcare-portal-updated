@@ -68,7 +68,7 @@ mat-sidenav {
         padding: 10px;
 
         &.active {
-            border-left: solid 2px #FC5960;
+            border-left: solid 2px $primary;
         }
     }
 }
@@ -154,7 +154,7 @@ a {
     }
 
     .badge {
-        background: #FC5960;
+        background: $primary;
         border-radius: 50%;
         color: #fff;
         width: 20px;

@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .bannerBoxWrap {
     background: url("../../../assets/img/banner.png");
     background-size: cover;
@@ -15,7 +17,7 @@
     width: 100%;
 }
 .bannerBox_heading {
-    background: #fc5960;
+    background: $primary;
     padding: 20px 40px 20px;
     color: #fff;
     margin: 0;
@@ -42,7 +44,7 @@
     font-size: 30px;
     font-weight: 600;
     margin: 0 0 20px;
-    color: #FC5960;
+    color: $primary;
 }
 
 .bgBox {

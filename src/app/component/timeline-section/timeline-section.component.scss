@@ -1,3 +1,4 @@
+@import "../../../variables.scss";
 
 .timelineSec {
     height: 100%;
@@ -49,7 +50,7 @@
         }
 
         &:after, &:before {
-            background: #fb5a60;
+            background: $primary;
         }
 
         .timelineHeading {

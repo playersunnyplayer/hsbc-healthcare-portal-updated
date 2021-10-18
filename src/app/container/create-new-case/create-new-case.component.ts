@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
@@ -12,6 +12,7 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
   styleUrls: ['./create-new-case.component.scss']
 })
 export class CreateNewCaseComponent {
+  primary = "#fc5960";
   
   slidess = [
       {'image': 'https://gsr.dev/material2-carousel/assets/demo.png'}, 

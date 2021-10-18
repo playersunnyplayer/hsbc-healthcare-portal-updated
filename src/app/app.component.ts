@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
 
   title = 'hsbc-healthcare-portal-upated';
 
-
     loginForm!: FormGroup;
   
     constructor(private formBuilder: FormBuilder, private router: Router) {

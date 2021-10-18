@@ -34,12 +34,12 @@ strong, b, .strong, .bold {
 }
 
 .btn-outline-custom-primary {
-    border-color: #FC5960;
-    color: #FC5960;
+    border-color: $primary;
+    color: $primary;
     font-size: 14px;
 
     &:hover {
-        background: #FC5960;
+        background: $primary;
         color: #fff;
     }
 }
@@ -56,7 +56,7 @@ strong, b, .strong, .bold {
 //   }
   
 //   ::-webkit-scrollbar-thumb {
-//     background: #FC5960; 
+//     background: $primary; 
 //     border-radius: 10px;
 //   }
 
@@ -76,7 +76,7 @@ strong, b, .strong, .bold {
 }
 
 h3 {
-    color: #FC5960;
+    color: $primary;
     font-weight: 500;
 }
 
@@ -94,9 +94,9 @@ h3 {
 
         &:hover,
         &.current-section {
-            color: #FC5960;
+            color: $primary;
             font-weight: 500;
-            border-left: solid 1px #FC5960;
+            border-left: solid 1px $primary;
         }
     }
 }
@@ -142,7 +142,7 @@ h3 {
         width: 100%;
         text-align: left;
         background: #fff;
-        border-left: solid 1px #FC5960;
+        border-left: solid 1px $primary;
         color: #444;
         text-decoration: none;
         border-radius: 0;
@@ -156,16 +156,16 @@ h3 {
 .customTable {
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #f5e1f0;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f5e1f0;
+
+    td, th {
+        border: 1px solid #f5e1f0;
+        text-align: left;
+        padding: 8px;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #f5e1f0;
+    }
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar,
@@ -205,7 +205,7 @@ h3 {
 
     // &:after {
     //     content: "";
-    //     border-bottom: solid 10px #FC5960;
+    //     border-bottom: solid 10px $primary;
     //     border-left: solid 10px transparent;
     //     border-right: solid 10px transparent;
     //     bottom: 0;
@@ -282,13 +282,13 @@ h3 {
 
 .btn-primary {
     min-width: 100px;
-    background: #fb5a60;
+    background: $primary;
     border: 0;
     color: #fff;
     padding: 10px 30px;
 
     &:hover, &:active, &:focus, .active {
-        background: #fb5a60 !important;
+        background: $primary !important;
     }
 
     img {
@@ -296,7 +296,7 @@ h3 {
     }
 
     &.grey {
-        color: #FC5960 !important;
+        color: $primary !important;
         background: #f3f7f9 !important;
     }
 
@@ -307,7 +307,7 @@ h3 {
 
     &.pink {
         color: #fff;
-        background: #FC5960;
+        background: $primary;
     }
 
     i {
@@ -318,13 +318,13 @@ h3 {
 }
 
 .btn-secondary {
-    border: solid 1px #fb5a60;
-    color: #fb5a60;
+    border: solid 1px $primary;
+    color: $primary;
     background: transparent;
 
     &:hover, &:active, &:focus, .active {
-        border: solid 1px #fb5a60;
-        color: #fb5a60 !important;
+        border: solid 1px $primary;
+        color: $primary !important;
         background: transparent !important;
     }
 
@@ -345,11 +345,11 @@ h3 {
 }
 
 .pinkText {
-    color: #FC5960;
+    color: $primary;
 }
 
 .pinklink {
-    color: #FC5960;
+    color: $primary;
     text-decoration: underline;
 }
 
@@ -360,7 +360,7 @@ h3 {
 }
 
 .coloredLink {
-    color: #FC5960;
+    color: $primary;
     text-decoration: underline;
 }
 
@@ -394,17 +394,17 @@ h3 {
 }
 
 .arrowBtn {
-    border: solid 1px #FC5960;
+    border: solid 1px $primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 0 20px;
-    color: #FC5960;
+    color: $primary;
     background: #fff;
 }
 
 .arrowIconWrap {
-    background: #FC5960;
+    background: $primary;
     padding: 6px 10px;
     font-size: 22px;
     margin: 0 0 0 20px;
@@ -419,14 +419,14 @@ h3 {
     margin: 10px 0 0;
 
     i {
-        color: #FC5960;
+        color: $primary;
         font-size: 20px;
         margin: 0 10px 0 0;
     }
 }
 
 .borderBottomPink {
-    border-bottom: solid 1px #FC5960;
+    border-bottom: solid 1px $primary;
 }
 
 .borderLeft-pink {
@@ -489,7 +489,7 @@ h3 {
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
-    color: #FC5960;
+    color: $primary;
     margin: 10px 0 40px;
 
     i {
@@ -504,7 +504,7 @@ h3 {
     top: 0;
     background: none;
     border: 0;
-    color: #FC5960;
+    color: $primary;
 }
 
 .consultationBtnsWrap {
@@ -538,7 +538,7 @@ h3 {
     top: 14px;
     background: no-repeat;
     border: 0;
-    color: #fb5a60;
+    color: $primary;
     font-size: 22px;
 }
 
@@ -582,8 +582,8 @@ h3 {
 
     input[type="radio"]:focus + label,
     label:hover, label.active {
-        border: solid 2px #fb5a60;
-        background: rgba(251, 90, 96, 0.28);
+        border: solid 2px $primary;
+        background: rgba($primary, .2);
 
         img {
             filter: inherit !important;
@@ -608,7 +608,7 @@ h3 {
 
     &:hover {
         svg path {
-            fill: #fb5a60;
+            fill: $primary;
         }
     }
 }
@@ -667,6 +667,10 @@ h3 {
 
     input[type="radio"]:focus + label,
     label:hover, label.active {
-        border: solid 2px #fb5a60;
+        border: solid 2px $primary;
     }
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $primary;
 }
